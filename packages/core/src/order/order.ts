@@ -426,6 +426,14 @@ export namespace Order {
           ),
       );
 
+      if (items.length === 0) {
+        throw new VisibleError(
+          "validation",
+          ErrorCodes.Validation.INVALID_PARAMETER,
+          "No valid items in order",
+        );
+      }
+
       const filterCtx = {
         ...ProductFilter.use(),
         region: undefined,
