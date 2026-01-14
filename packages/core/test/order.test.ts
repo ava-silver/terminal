@@ -11,12 +11,12 @@ describe("order", () => {
       token: "tok_visa",
     });
     const address = await Address.create({
-      name: "John Smith",
-      zip: "33133",
-      city: "Miami",
+      name: "Jane Doe",
+      zip: "02201",
+      city: "Boston",
       country: "US",
-      street1: "2800 SW 28th Terrace",
-      province: "FL",
+      street1: "1 City Hall Square",
+      province: "MA",
     });
 
     await expect(
